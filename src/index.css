@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+.container-map {
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 1200px;
+  max-width: 95vw;
+  height: 700px;
+  position: relative;
+}
+
+.container-form {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 32px;
+  margin-left: 32px;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.10), 0 1px 8px 0 rgba(0,0,0,0.10);
+}
+
+.container-form form{
+  margin: 16px;
+  width: 400px;  
+}
+
+.container-form input, .container-form button {
+  width: calc(100% - 40px);
+  border-style: none;
+  border-radius: 4px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  margin-top: 0;
+  margin-left: 40px;
+}
+
+.container-form input {
+  background-color: #F0F3F7;
+  margin-bottom: 32px;
+  padding-left: 10px;
+  height: 32px;
+  font-weight: 400;
+  color: #252525;
+}
+
+.container-form input::placeholder {
+  color: #8596A6;
+}
+
+.pickup::before {
+  content: "";
+  height: 32px;
+  width: 32px;
+  position: absolute;
+  background: url('/img/pickUpBadgeBlank.svg') no-repeat center center;
+}
+
+.pickup.valid::before {
+  background: url('/img/pickUpBadgePresent.svg') no-repeat center center;
+}
+
+.pickup.invalid::before {
+  background: url('/img/pickUpBadgeError.svg') no-repeat center center;
+}
+
+.dropoff::before {
+  content: "";
+  height: 32px;
+  width: 32px;
+  position: absolute;
+  background: url('/img/dropOffBadgeBlank.svg') no-repeat center center;
+}
+
+.dropoff.valid::before {
+  background: url('/img/dropOffBadgePresent.svg') no-repeat center center;
+}
+
+.dropoff.invalid::before {
+  background: url('/img/dropOffBadgeError.svg') no-repeat center center;
+}
+
+.container-form button {
+  background-color: #10A2EA;
+  margin-top: 0;
+  background: radial-gradient(circle,#10A2EA 0%, #0F99E8 100%);
+  box-shadow: 0 1px 2px 0 rgba(16,162,234,0.30);
+  color: #FFF;
+  height: 40px;
+  font-weight: 900;
+}
+
+.container-form button:disabled {
+  opacity: 50%;
+}
+
+.job-success {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 32px;
+  margin-left: 32px;
+  background-color: rgba(51,51,51,0.90);
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.10), 0 1px 8px 0 rgba(0,0,0,0.10);
+  color: #FFF;
+  line-height: 40px;
+  height: 40px;
+  width: 360px;
+  font-weight: 400;
+  border-radius: 8px;
+  text-align: center;
+}
